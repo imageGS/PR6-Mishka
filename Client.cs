@@ -4,29 +4,35 @@ using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PR6
 {
     internal class Client
     {
-        double intertainment = 0;
-        int money = 200;
+        int intertainment = 0;
+        public int Money { get; private set; } = 200;
 
-
-        Singleton instance;
-        public Singleton getInstance()
+        public bool HasEnoughMoney(int price)
         {
-            if (instance == null)
-                instance = new Singleton();
-            return instance;
+            if (price > Money)
+            return false; else return true;
         }
-        public void DrinkRedWine(double intertainment, int money)
+        public void SpendMoney(int price)
         {
-            RedWine redWine = new RedWine();
-            
-            this.intertainment = intertainment;
-            this.money = money;
-            
+            Money -= price;
+        }
+
+        public bool CanDrinkMore(int intertainment)
+        {
+            if ((this.intertainment + intertainment) > 100)
+                return false;
+            else return true;
+        }
+
+        public void Drink(int intertainment)
+        {
+            this.intertainment += intertainment;
         }
     }
 }

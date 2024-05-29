@@ -8,65 +8,25 @@ namespace PR6
 {
     abstract class Drink
     {
-        int price;
-        double intertainment;
-
-        void DrinkThis()
-        {
-
-        }
+        public virtual int Price { get; protected set; } = 10;
+        public virtual int Intertainment { get; protected set; }
     }
 
     internal class RedWine : Drink
     {
-        int price = 50;
-        double intertainment = 25;
-
-        int GetRedWinePrice()
-        {
-            return price;
-        }
-
-        double GetRedWineIntertainment()
-        {
-            return intertainment;
-        }
-        public RedWine() 
-        {
-            GetRedWinePrice();
-            GetRedWineIntertainment();
-        }
+        public override int Price { get; protected set; } = 50;
+        public override int Intertainment { get; protected set; } = 25;
     }
 
     internal class Whiskey : Drink
     {
-        int price = 100;
-        double intertainment = 50;
-
-        int GetWhiskeyPrice() 
-        {
-            return price;
-        }
-
-        int GetWhiskeyIntertainment()
-        {
-            return intertainment;
-        }
+        public override int Price { get; protected set; } = 100;
+        public override int Intertainment { get; protected set; } = 50;
     }
 
     internal class WhiteWine : Drink
     {
-        int price = 25;
-        int intertainment = 15;
-
-        int GetWhiteWinePrice() 
-        {
-            return price;
-        }
-
-        int GetWhiteWineIntertainment()
-        {
-            return intertainment;
-        }
+        public override int Price { get; protected set; } = 25;
+        public override int Intertainment { get; protected set; } = 15;
     }
 }

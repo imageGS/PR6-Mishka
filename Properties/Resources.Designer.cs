@@ -109,5 +109,25 @@ namespace PR6.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _910_9108890_mor2hu_morshu_zelda {
+            get {
+                object obj = ResourceManager.GetObject("910-9108890_mor2hu-morshu-zelda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Money_PNG_Transparent_Image {
+            get {
+                object obj = ResourceManager.GetObject("Money-PNG-Transparent-Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
